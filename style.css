@@ -1,0 +1,209 @@
+/*
+Selector {
+    property: value;
+}
+
+Selector : 
+- Tag: p, div, h1, main , a ,span
+- CLass: .demo .header .demo 
+- ID: #container #footer
+
+Property: color , background-color 
+value: blue, red, orange 
+*/
+html {
+    font-size: 62.5%; /* = 10px */
+}
+body {
+    font-family: 'Afacad', sans-serif;
+    font-size: 1.5rem;
+}
+* {
+    box-sizing:border-box;
+}
+h1 {
+    color: #f68523;
+    background-image: linear-gradient(to right, rgb(181, 252, 41), rgb(126, 244, 244));
+    font-size: 27px;
+    font-weight: bolder;
+    
+    width: 560px;
+    padding: 5px 30px;
+    margin-top:50px;
+    
+   
+    border-top: 5px solid lightblue;
+
+    border-top-right-radius: 20px;
+}
+    .background {
+        width: 560px;
+        height: 333px;
+        padding: 5px 30px;
+        background-image: linear-gradient(to right, rgb(125, 201, 125),rgb(240, 240, 150));
+        border-bottom-right-radius: 20px;
+         line-height: 1.4;
+         text-align: justify;
+         font-weight: bold;
+         letter-spacing: 1.5px;
+         overflow-y: auto; 
+        a:visited {
+            color: rgb(255, 0, 0);
+        }
+        a:hover {
+            color:rgb(86, 86, 232);
+        }
+    }
+   
+
+p {
+    /* color: value: 
+    name: red, orange, blue
+    hexa: #ffa400, #ff7870 #666666 -> #666
+    rgb: rgb(0,0,0), rgb(255,255,255)
+    rgba ( giam do dam cua mau 0 -> 1): rgb(0,0,0,0.5) */
+    color: rgba(16, 103, 168, 0.404);
+}
+/* img {
+    
+    display: block;
+    margin-top: -333px;
+    margin-left: 560px;
+    border-radius: 5%;
+} */
+.image{
+    margin-top: -333px;
+    margin-left: 560px;
+    
+}
+.background2 {
+    background-image: url(https://images.unsplash.com/photo-1636703781894-ea908add8e6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /*width: 100%;
+    height: 1500px;*/
+    /* lam cho hình ảnh vừa với khung hình, không xuất hiện scroll: 
+        - thay đổi đơn vị : width = 100vw
+                            height = 100vh;
+    */
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y:auto;
+    
+    
+}
+/* font size 100% = 16px
+    thuộc tính font size mặc định của các trình duyệt là 100% = 16px
+    1 em = 1 rem = 16px */
+.em {
+    width: 10em;
+    height: 10em;
+    background-color: yellowgreen;
+    /* Là đơn vị phụ thuộc vào thuộc tính font size của chính nó hoặc phần tử chứa nó */
+    font-size: 32px;
+}
+.rem {
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(178, 217, 217);
+    /* là đơn vị phụ thuộc vào thuộc tính font size của html
+    100% = 16px
+    ?%   = 10px
+         */
+    font-size: 32px;
+    /* border-top: 20px solid  rgb(90, 0, 128); */
+    border-top-left-radius: 20px ;
+    /* border-left: 15px dashed rgb(0, 0, 0); */
+    /* border-bottom: 20px solid rgb(90,1,143); */
+    border-bottom-right-radius: 20px ;
+}
+/* thuộc tính BORDER
+    tạo border:
+    - border-width ; border-style ; border-color
+    border-style: solid ; dotted ; dashed
+    ex: border: width style color
+    bo góc khuôn: 
+    - border-position-position-radius: value;
+     */
+
+
+.margin {
+    width: 14rem;
+    height: 16rem;
+    background-color:cornflowerblue;
+    /* Thuộc tính margin: dùng để căn lề đối tượng thuộc thẻ block */
+     margin:auto; 
+    /* giữa trang bên trên */
+    margin: 50px;
+    /* trái phải trên dưới */
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-left:150px;
+    margin-bottom: 100px;
+    margin: 100px 140px;
+    /* top-bot 100px ; right-left 140px */
+    margin: 40px 140px 20px;
+    /* top 40px ; right-left 140px ; left 20px */
+    
+}
+.margin1 {
+    width: 14rem;
+    height: 16rem;
+    background-color: aquamarine;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-left:auto;
+    margin-right:auto;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px;
+}
+/* padding : khoang trống bên trong : 
+cách sử dụng hoàn toàn giống với margin*/
+
+.boxed {
+    width: 10rem;
+    height: 10rem;
+    border: 5px solid black;
+    padding: 1rem;
+    background-color: orangered;
+    box-sizing: content-box;
+    /* giá trị mặc định của box:
+    width = width + padding left/right + border left/right
+    height = height + padding top/bot + border top/bot*/
+    box-sizing: border-box;
+}
+/* Display : the hien  (inline-block ; block) */
+.font {
+    line-height: 1.5;
+    /* khoang cach giua cac chu */
+    text-align: right;
+    /* vi tri cua chu  (right left center justify)*/
+    letter-spacing: 2px;
+    /* khoang cach giua cac ky tu ( mac dinh la 0 ) */
+    word-spacing: 2px;
+    /* khoang cach giua cac tu */
+    white-space: nowrap;
+    /* chu hien thi tren 1 dong */
+    
+    /* khi overflow thi hien thi dau 3 cham 
+    muốn hiện thị chữ đến dòng thứ 3 thì xuất hiện dấu 3 chấm :*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.gradient  {
+    width: 50%;
+    height: 100vh;
+    margin: 10px auto;
+    background-image:  linear-gradient(to left bottom, rgba(198, 131, 198, 0.562), rgba(115, 201, 201, 0.66)), url(https://images.unsplash.com/photo-1701861970834-e907b861e8d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
